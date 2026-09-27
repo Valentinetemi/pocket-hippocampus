@@ -38,7 +38,7 @@ Pocket Hippocampus should answer with evidence from its stored event history:
 
 The goal is not to recognize every possible tool. The hackathon prototype focuses on preserving object identity, recording meaningful state changes, and recalling a short physical history reliably.
 
-## Why it runs on-device
+### Why it runs on-device
 
 A camera observing a workbench may capture private devices, customer information, proprietary equipment, and details of someone’s surroundings. Continuously uploading that stream to a remote model would create unnecessary privacy, latency, cost, and connectivity problems.
 
@@ -52,7 +52,7 @@ This provides:
 * No inference API costs
 * Direct user control over stored memories
 
-## How it works
+### How it works
 
 Every camera observation passes through a small local pipeline.
 
@@ -83,7 +83,7 @@ The system retrieves the observations and events relevant to a question. A small
 
 The language model does not receive an entire video and guess what happened. Its answer is grounded in events already produced by the perception and memory layers.
 
-## Architecture
+### Architecture
 
 | Layer | Responsibility | Planned implementation |
 | --- | --- | --- |
@@ -96,7 +96,7 @@ The language model does not receive an entire video and guess what happened. Its
 
 Every model included in the final submission will contain no more than 500 million parameters and will run locally. Pocket Hippocampus will not use OpenAI, Anthropic, Gemini, or any hosted AI inference API.
 
-## Example questions
+### Example questions
 
 * Which component has not returned?
 * Where was the screwdriver last seen?
@@ -107,7 +107,7 @@ Every model included in the final submission will contain no more than 500 milli
 
 When the stored evidence is incomplete or the identity match is uncertain, the system should clearly report that uncertainty instead of inventing an event.
 
-## Hackathon scope
+### Hackathon scope
 
 The Ryze AI Hack prototype focuses on one reliable loop:
 
@@ -119,7 +119,7 @@ Continuous life logging, medical use, surveillance, large-scale multi-camera tra
 
 The workbench is the first practical demonstration of the underlying memory system, not the limit of what the architecture could eventually support.
 
-## Current status
+### Current status
 
 The existing prototype includes:
 
@@ -133,11 +133,11 @@ The existing prototype includes:
 
 The Ryze AI Hack build will connect these parts into a complete on-device observation, memory, and recall loop.
 
-## Setup
+### Setup
 
 Setup instructions will be added when the on-device pipeline is finalized.
 
-## Models and licences
+### Models and licences
 
 The exact model variants, parameter counts, licences, files, and sources will be verified and recorded before submission.
 
@@ -150,16 +150,16 @@ The exact model variants, parameter counts, licences, files, and sources will be
 
 Only models that satisfy the Ryze AI Hack rules will be included in the final application.
 
-## Responsible use
+### Responsible use
 
 Pocket Hippocampus is a research prototype. It is not a medical device, surveillance product, or safety-critical system.
 
 Object identity can be affected by lighting, occlusion, camera movement, and visually similar items. The interface will expose uncertainty, provide visible recording controls, and allow users to inspect and delete stored memories.
 
-## Licence
+### Licence
 
 The project code is released under the [MIT Licence](LICENSE). Individual model weights remain subject to their respective licences.
 
-## Author
+### Author
 
 Built by [Temiloluwa Valentine](https://github.com/Valentinetemi).
